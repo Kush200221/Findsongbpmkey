@@ -1,6 +1,6 @@
 # FindSongKey
 
-<svg xmlns="http://www.w3.org/2000/svg" width="386" height="76" viewBox="0 0 386 76" role="img" aria-labelledby="title desc">
+<img width="386" height="76" alt="findsongkey-logo-dark" src="https://github.com/user-attachments/assets/93cab355-8980-49f3-a0aa-8a464ca31028" /><svg xmlns="http://www.w3.org/2000/svg" width="386" height="76" viewBox="0 0 386 76" role="img" aria-labelledby="title desc">
   <title id="title">FindSongKey logo</title>
   <desc id="desc">Amber audio analysis dial beside the FindSongKey wordmark and BPM and key analyzer descriptor.</desc>
   <g fill="none">
@@ -13,6 +13,8 @@
   <text x="94" y="40" fill="#E8E7DF" font-family="DM Mono, SFMono-Regular, Consolas, monospace" font-size="28" font-weight="500" letter-spacing="-1.35"><tspan fill="#EF9F27">find</tspan><tspan>song</tspan><tspan fill="#EF9F27">key</tspan></text>
   <text x="96" y="59" fill="#888780" font-family="DM Mono, SFMono-Regular, Consolas, monospace" font-size="10" font-weight="500" letter-spacing="2.2">BPM + KEY ANALYZER</text>
 </svg>
+
+
 
 A fast, privacy-friendly web app for detecting the BPM and musical key of audio files directly in the browser.
 
