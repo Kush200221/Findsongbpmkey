@@ -1,0 +1,23 @@
+src/
+├── layouts/
+│   ├── BaseLayout.astro
+│   └── ToolLayout.astro
+├── pages/
+│   ├── index.astro          ← main tool page
+│   ├── how-it-works.astro
+│   └── tools/
+│       └── key-finder.astro
+├── components/
+│   ├── ui/
+│   │   ├── Header.astro
+│   │   ├── Footer.astro
+│   │   ├── AdUnit.astro
+│   │   ├── ThemeToggle.astro
+│   │   └── FAQ.astro
+│   └── tool/
+│       ├── BpmKeyAnalyzer.tsx  ← Astro island
+│       ├── DropZone.tsx
+│       └── ResultCard.tsx
+└── lib/
+    ├── audioAnalysis.ts
+    └── musicalKey.ts

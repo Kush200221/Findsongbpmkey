@@ -1,0 +1,122 @@
+---
+---
+
+<section class="faq-section" id="faq">
+  <h2 class="faq-title">Frequently asked questions</h2>
+
+  <div class="faq-item">
+    <button class="faq-question" type="button">
+      How does BPM detection work?
+      <span class="faq-chevron">▾</span>
+    </button>
+    <div class="faq-answer-wrap">
+      <div class="faq-answer">
+        Our tool uses advanced signal processing algorithms to analyze the rhythmic
+        patterns in your audio file. It identifies beat positions using onset detection
+        and autocorrelation, then calculates the tempo in beats per minute (BPM). The
+        analysis runs entirely in your browser — your audio never leaves your device.
+      </div>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question" type="button">
+      What audio formats are supported?
+      <span class="faq-chevron">▾</span>
+    </button>
+    <div class="faq-answer-wrap">
+      <div class="faq-answer">
+        We support MP3, WAV, FLAC, and M4A files up to 20MB. Most common audio formats
+        from streaming rips, DJ software exports, or studio recordings will work perfectly.
+      </div>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question" type="button">
+      What is the Camelot Wheel?
+      <span class="faq-chevron">▾</span>
+    </button>
+    <div class="faq-answer-wrap">
+      <div class="faq-answer">
+        The Camelot Wheel is a tool used by DJs to find harmonically compatible tracks
+        for smooth mixing. It assigns each musical key a code (like 8A or 6B). Tracks
+        with the same code, or codes that are adjacent on the wheel, will sound great
+        mixed together.
+      </div>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question" type="button">
+      Is my audio uploaded to a server?
+      <span class="faq-chevron">▾</span>
+    </button>
+    <div class="faq-answer-wrap">
+      <div class="faq-answer">
+        No. All analysis happens 100% in your browser using WebAssembly. Your audio file
+        is never uploaded, transmitted, or stored anywhere. It stays on your device the
+        entire time.
+      </div>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question" type="button">
+      How accurate is the key detection?
+      <span class="faq-chevron">▾</span>
+    </button>
+    <div class="faq-answer-wrap">
+      <div class="faq-answer">
+        Our key detection uses the Essentia library's KeyExtractor algorithm, which
+        achieves high accuracy on most genres of music. Results are most reliable with
+        tracks that have a clear tonal center. Songs with key changes or heavily
+        atonal sections may show the dominant key.
+      </div>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question" type="button">
+      Can I use this for DJ mixing?
+      <span class="faq-chevron">▾</span>
+    </button>
+    <div class="faq-answer-wrap">
+      <div class="faq-answer">
+        Absolutely. The Camelot Wheel code shown in the results is specifically designed
+        for harmonic mixing. Match tracks with the same Camelot code, or move ±1 on the
+        wheel for smooth key transitions in your sets.
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  document.querySelectorAll('.faq-question').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const item = btn.parentElement as HTMLElement;
+      const wrap = item.querySelector('.faq-answer-wrap') as HTMLElement;
+      const isOpen = item.classList.contains('open');
+
+      if (isOpen) {
+        // Collapse: set explicit height first, then transition to 0
+        wrap.style.maxHeight = wrap.scrollHeight + 'px';
+        requestAnimationFrame(() => {
+          wrap.style.maxHeight = '0';
+        });
+        item.classList.remove('open');
+      } else {
+        // Expand: set max-height to scrollHeight
+        wrap.style.maxHeight = wrap.scrollHeight + 'px';
+        item.classList.add('open');
+
+        // After transition, remove inline max-height so content can reflow
+        const handler = () => {
+          wrap.style.maxHeight = 'none';
+          wrap.removeEventListener('transitionend', handler);
+        };
+        wrap.addEventListener('transitionend', handler);
+      }
+    });
+  });
+</script>

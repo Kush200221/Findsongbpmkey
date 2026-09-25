@@ -1,0 +1,37 @@
+---
+---
+
+<div class="theme-toggle-wrap" id="theme-toggle-wrap">
+  <span class="theme-toggle-icon" id="theme-icon" aria-hidden="true">☽</span>
+  <button
+    class="theme-toggle"
+    id="theme-toggle"
+    type="button"
+    aria-label="Toggle dark/light mode"
+    title="Toggle dark/light mode"
+  >
+    <span class="toggle-knob"></span>
+  </button>
+</div>
+
+<script>
+  const wrap = document.getElementById('theme-toggle-wrap');
+  const icon = document.getElementById('theme-icon');
+
+  function updateIcon() {
+    const theme = document.documentElement.getAttribute('data-theme') || 'dark';
+    if (icon) icon.textContent = theme === 'dark' ? '☽' : '☀';
+  }
+
+  wrap?.addEventListener('click', () => {
+    const html = document.documentElement;
+    const current = html.getAttribute('data-theme') || 'dark';
+    const next = current === 'dark' ? 'light' : 'dark';
+    html.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+    updateIcon();
+  });
+
+  // Set correct icon on load
+  updateIcon();
+</script>

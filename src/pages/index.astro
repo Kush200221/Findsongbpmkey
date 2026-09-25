@@ -1,0 +1,32 @@
+---
+import ToolLayout from '../layouts/ToolLayout.astro';
+import AdUnit from '../components/ui/AdUnit.astro';
+import FAQ from '../components/ui/FAQ.astro';
+import BpmKeyAnalyzer from '../components/tool/BpmKeyAnalyzer';
+---
+
+<ToolLayout
+  title="Find Song Key & BPM — Free Instant Audio Analyzer | FindSongKey"
+  description="Find the BPM and musical key of any song instantly. Upload an MP3, WAV, or FLAC file. Get tempo, key signature, and Camelot wheel code — free, fast, no signup."
+  canonical="https://findsongkeybpm.com"
+>
+  <!-- Hero -->
+  <section class="hero" id="hero">
+    <div class="hero-eyebrow">Free · Instant · No signup</div>
+    <h1 class="hero-h1">
+      Find the <span class="accent">BPM & Key</span><br />of any song
+    </h1>
+    <p class="hero-sub">
+      Upload an MP3, WAV, FLAC, or M4A file. Results in seconds.
+    </p>
+  </section>
+
+  <!-- BPM & Key Analyzer (React Island) -->
+  <BpmKeyAnalyzer client:only="react" />
+
+  <!-- Ad Unit -->
+  <AdUnit />
+
+  <!-- FAQ -->
+  <FAQ />
+</ToolLayout>

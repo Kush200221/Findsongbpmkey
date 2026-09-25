@@ -1,0 +1,115 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/ui/Header.astro';
+import Footer from '../components/ui/Footer.astro';
+---
+
+<BaseLayout
+  title="About Us — FindSongKey | Free BPM & Key Analyzer"
+  description="Learn about FindSongKey — a free, browser-based tool that instantly detects the BPM and musical key of any song. Built for DJs, producers, and musicians."
+  canonical="https://findsongkeybpm.com/about"
+>
+  <Header />
+  <main class="content-page" id="about">
+    <h1>About FindSongKey</h1>
+
+    <div class="about-highlight">
+      <p class="about-tagline">
+        A free, instant tool to find the BPM and musical key of any song —
+        right in your browser.
+      </p>
+    </div>
+
+    <h2>Our mission</h2>
+    <p>
+      FindSongKey was built with a simple goal: give musicians, DJs, and producers
+      instant access to the tempo and key of any track without the hassle of
+      installing software, creating accounts, or uploading files to the cloud.
+    </p>
+    <p>
+      Whether you're preparing a DJ set, figuring out the key for a remix, or just
+      curious about a song's BPM — FindSongKey delivers accurate results in
+      seconds, completely free.
+    </p>
+
+    <h2>What makes us different</h2>
+    <ul>
+      <li>
+        <strong>100% browser-based</strong> — All audio analysis happens locally on
+        your device using WebAssembly. Your files never leave your computer.
+      </li>
+      <li>
+        <strong>No signup required</strong> — Just drag, drop, and get your results.
+        No email, no account, no paywall.
+      </li>
+      <li>
+        <strong>Professional-grade accuracy</strong> — Powered by the Essentia
+        audio analysis library, the same technology used in academic research and
+        commercial music software.
+      </li>
+      <li>
+        <strong>Camelot wheel support</strong> — Instantly see the Camelot code
+        for harmonic mixing, making it easier to create seamless DJ transitions.
+      </li>
+      <li>
+        <strong>Privacy first</strong> — We believe your music is your business.
+        No tracking of what you analyze, no server-side processing, no data
+        collection.
+      </li>
+    </ul>
+
+    <h2>The technology</h2>
+    <p>
+      FindSongKey uses cutting-edge browser technology to deliver desktop-quality
+      audio analysis without any downloads:
+    </p>
+    <ul>
+      <li>
+        <strong>WebAssembly (WASM)</strong> — Runs the Essentia audio analysis
+        library at near-native speed directly in your browser.
+      </li>
+      <li>
+        <strong>Web Audio API</strong> — Decodes audio files locally, supporting
+        MP3, WAV, FLAC, and M4A formats.
+      </li>
+      <li>
+        <strong>RhythmExtractor2013</strong> — A multi-feature BPM detection
+        algorithm combining onset detection, beat tracking, and autocorrelation
+        for robust tempo estimation.
+      </li>
+      <li>
+        <strong>KeyExtractor</strong> — Uses chromagram analysis and the
+        Krumhansl-Schmuckler algorithm to identify the musical key with high
+        accuracy.
+      </li>
+    </ul>
+
+    <h2>Who it's for</h2>
+    <ul>
+      <li>
+        <strong>DJs</strong> — Quickly find BPM and Camelot codes for harmonic
+        mixing and smooth transitions.
+      </li>
+      <li>
+        <strong>Producers</strong> — Match tempos and keys when sampling,
+        remixing, or collaborating on tracks.
+      </li>
+      <li>
+        <strong>Musicians</strong> — Identify the key of a song to play along,
+        transpose, or arrange covers.
+      </li>
+      <li>
+        <strong>Music students</strong> — Learn about musical keys and tempo by
+        analyzing songs you love.
+      </li>
+    </ul>
+
+    <h2>Get in touch</h2>
+    <p>
+      Have feedback, suggestions, or found a bug? We'd love to hear from you.
+      Visit our <a href="/contact" class="content-link">Contact page</a> to reach
+      out. Your input helps us build a better tool for everyone.
+    </p>
+  </main>
+  <Footer />
+</BaseLayout>

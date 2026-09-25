@@ -1,0 +1,78 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/ui/Header.astro';
+import Footer from '../components/ui/Footer.astro';
+---
+
+<BaseLayout
+  title="How It Works — BPM & Key Detection | FindSongKey"
+  description="Learn how FindSongKey detects BPM and musical key from your audio files using advanced signal processing, entirely in your browser."
+  canonical="https://findsongkeybpm.com/how-it-works"
+>
+  <Header />
+  <main class="content-page" id="how-it-works">
+    <h1>How it works</h1>
+
+    <h2>1. Upload your audio</h2>
+    <p>
+      Drag and drop an audio file onto the analyzer, or click to browse your files.
+      We support MP3, WAV, FLAC, and M4A formats up to 20MB. Your file never leaves
+      your device — everything runs locally in your browser.
+    </p>
+
+    <h2>2. Audio decoding</h2>
+    <p>
+      Your browser's built-in Web Audio API decodes the audio file into raw waveform
+      data. If the file is stereo, we downmix it to mono. If the sample rate differs
+      from 44,100 Hz, we resample it for optimal analysis accuracy.
+    </p>
+
+    <h2>3. BPM detection</h2>
+    <p>
+      We use the RhythmExtractor2013 algorithm from the Essentia library, which combines
+      multiple tempo estimation methods including onset detection, beat tracking, and
+      autocorrelation. This multi-feature approach provides robust tempo estimation
+      across a wide range of musical genres.
+    </p>
+    <ul>
+      <li>Onset detection identifies the start of each musical event</li>
+      <li>Autocorrelation finds repeating rhythmic patterns</li>
+      <li>Beat tracking aligns detected onsets to a tempo grid</li>
+      <li>The final BPM is the consensus of multiple estimators</li>
+    </ul>
+
+    <h2>4. Key detection</h2>
+    <p>
+      Musical key is detected using Essentia's KeyExtractor algorithm. It analyzes the
+      harmonic content of the audio by computing a chromagram (pitch class profile) and
+      matching it against key profiles using the Krumhansl-Schmuckler algorithm.
+    </p>
+    <ul>
+      <li>The audio is segmented into overlapping frames</li>
+      <li>A chromagram extracts pitch class energy for each frame</li>
+      <li>Key profiles for all 24 major and minor keys are compared</li>
+      <li>The best-matching key is returned with a confidence score</li>
+    </ul>
+
+    <h2>5. Camelot Wheel</h2>
+    <p>
+      Once the key is detected, we map it to its Camelot Wheel code. The Camelot
+      system assigns each of the 24 musical keys a number (1–12) and a letter (A for
+      minor, B for major). DJs use this system to find harmonically compatible tracks
+      for smooth mixing transitions.
+    </p>
+    <ul>
+      <li>Same number, switch letter → relative major/minor (always compatible)</li>
+      <li>Same letter, ±1 number → adjacent keys (smooth transition)</li>
+      <li>Moving up in numbers → gradually increases energy</li>
+    </ul>
+
+    <h2>Privacy first</h2>
+    <p>
+      All analysis happens entirely in your browser using WebAssembly (WASM). Your
+      audio files are never uploaded to any server. They stay on your device from
+      start to finish. We don't track what you analyze, and we don't store any results.
+    </p>
+  </main>
+  <Footer />
+</BaseLayout>
