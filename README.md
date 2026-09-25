@@ -1,6 +1,18 @@
 # FindSongKey
 
-<img width="1774" height="887" alt="ChatGPT Image Sep 25, 2026, 04_32_19 PM" src="https://github.com/user-attachments/assets/6cc41934-0e7c-4571-af75-7d4722265f78" />
+<img width="386" height="76" alt="findsongkey-logo-dark" src="https://github.com/user-attachments/assets/0e3a0141-41e4-4274-b1c3-bc1defd92d3f" /><svg xmlns="http://www.w3.org/2000/svg" width="386" height="76" viewBox="0 0 386 76" role="img" aria-labelledby="title desc">
+  <title id="title">FindSongKey logo</title>
+  <desc id="desc">Amber audio analysis dial beside the FindSongKey wordmark and BPM and key analyzer descriptor.</desc>
+  <g fill="none">
+    <rect x="1" y="1" width="74" height="74" rx="17" fill="#1A1A17" stroke="#38372F" stroke-width="1"/>
+    <circle cx="38" cy="38" r="25" stroke="#51432D" stroke-width="2.5"/>
+    <path d="M38 13 A25 25 0 0 1 62.5 33" stroke="#EF9F27" stroke-width="3.5" stroke-linecap="round"/>
+    <path d="M17 38 H25 L29 29 L34 48 L40 25 L45 38 H59" stroke="#EF9F27" stroke-width="3.3" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="59" cy="38" r="2.5" fill="#F0EFE8"/>
+  </g>
+  <text x="94" y="40" fill="#E8E7DF" font-family="DM Mono, SFMono-Regular, Consolas, monospace" font-size="28" font-weight="500" letter-spacing="-1.35"><tspan fill="#EF9F27">find</tspan><tspan>song</tspan><tspan fill="#EF9F27">key</tspan></text>
+  <text x="96" y="59" fill="#888780" font-family="DM Mono, SFMono-Regular, Consolas, monospace" font-size="10" font-weight="500" letter-spacing="2.2">BPM + KEY ANALYZER</text>
+</svg>
 
 A fast, privacy-friendly web app for detecting the BPM and musical key of audio files directly in the browser.
 
