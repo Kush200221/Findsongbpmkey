@@ -9,7 +9,7 @@
     <path d="M17 38 H25 L29 29 L34 48 L40 25 L45 38 H59" stroke="#EF9F27" stroke-width="3.3" stroke-linecap="round" stroke-linejoin="round"/>
     <circle cx="59" cy="38" r="2.5" fill="#F0EFE8"/>
   </g>
-  <text x="94" y="40" fill="#E8E7DF" font-family="DM Mono, SFMono-Regular, Consolas, monospace" font-size="28" font-weight="500" letter-spacing="-1.35"><tspan fill="#EF9F27">find</tspan><tspan>song</tspan><tspan fill="#EF9F27">key</tspan></text>
+  <text x="94" y="40" fill="#E8E7DF" font-family="DM Mono, SFMono-Regular, Consolas, monospace" font-size="28" font-weight="500" letter-spacing="-1.35"><tspan fill="#EF9F27"></tspan><tspan></tspan><tspan fill="#EF9F27"></tspan></text>
   <text x="96" y="59" fill="#888780" font-family="DM Mono, SFMono-Regular, Consolas, monospace" font-size="10" font-weight="500" letter-spacing="2.2"></text>
 </svg>
 
