@@ -1,5 +1,7 @@
 # FindSongKey
 
+<img width="1774" height="887" alt="ChatGPT Image Sep 25, 2026, 04_32_19 PM" src="https://github.com/user-attachments/assets/6cc41934-0e7c-4571-af75-7d4722265f78" />
+
 A fast, privacy-friendly web app for detecting the BPM and musical key of audio files directly in the browser.
 
 [Live site](https://findsongkeybpm.com)
