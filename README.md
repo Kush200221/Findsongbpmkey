@@ -1,6 +1,6 @@
 # FindSongKey
 
-<img width="386" height="76" alt="findsongkey-logo-dark" src="https://github.com/user-attachments/assets/0e3a0141-41e4-4274-b1c3-bc1defd92d3f" /><svg xmlns="http://www.w3.org/2000/svg" width="386" height="76" viewBox="0 0 386 76" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="386" height="76" viewBox="0 0 386 76" role="img" aria-labelledby="title desc">
   <title id="title">FindSongKey logo</title>
   <desc id="desc">Amber audio analysis dial beside the FindSongKey wordmark and BPM and key analyzer descriptor.</desc>
   <g fill="none">
